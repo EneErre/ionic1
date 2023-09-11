@@ -47,7 +47,7 @@ export class LectorqrPage implements OnInit {
   async presentAlert() {
     let profesorMsg = `Profesor: ${this.clase.nombreProfesor}`
     let salaMsg = `Sala: ${this.clase.sala}`
-    let bodyMsg = `Profesor:  ${this.clase.nombreProfesor} - Sala: ${this.clase.nombreProfesor} - Dia: ${this.clase.dia} - Hora: ${this.clase.hora}`
+    let bodyMsg = `Profesor:  ${this.clase.nombreProfesor} - Sala: ${this.clase.sala} - Dia: ${this.clase.dia} - Hora: ${this.clase.hora}`
     const alert = await this.alertController.create({
       header: profesorMsg,
       subHeader: salaMsg,
