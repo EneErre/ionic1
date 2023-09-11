@@ -1,0 +1,55 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-menu-toggle>
+      <ion-button [routerLink]="['/login']">Ir al inicio</ion-button>
+      
+    </ion-menu-toggle>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Inicio sesion</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> 
+    
+      <ion-header collapse="condense">
+        <ion-toolbar>
+          <ion-title size="large">Cambiar contraseña</ion-title>
+        </ion-toolbar>
+      </ion-header>
+    
+    
+      <h1>Cambiar contraseña</h1>
+    
+      <form #formulario="ngForm" (ngSubmit)="cambiarPassword()">
+        <ion-list>
+          <ion-item>
+            <ion-input name="rut" type="text" label="Ingrese su rut:" labelPlacement="stacked" placeholder="123456789" [(ngModel)]="rut" required
+            minlength="9" maxlength="10"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input minlength="4" maxlength="4"  name="password" type="password" label="Ingrese nueva contraseña:" labelPlacement="stacked" placeholder="Contraseña" [(ngModel)]="password" required></ion-input>
+          </ion-item>
+        </ion-list>
+    
+        <ion-button (click)="limpiarInputs(formulario)" id="present-alert">Limpiar espacios</ion-button>
+    
+        <ion-button  type="submit" [disabled]="formulario.invalid">Recuperar contraseña </ion-button>
+      </form>
+        
+    
+    
+    
+
+  </ion-content>
+</div>

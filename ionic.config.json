@@ -1,0 +1,7 @@
+{
+  "name": "LectorQR",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
